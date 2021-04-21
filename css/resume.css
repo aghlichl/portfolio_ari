@@ -1,24 +1,40 @@
-/*!
- * Start Bootstrap - Resume v5.0.5 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
-#myVideo {
-  z-index: -100;
-  position: relative;
-  right: 0;
-  bottom: 0;
-  padding: 0;
-  min-width: 80%; 
-  max-height: 100vh;
-  min-height: 90vh;
-  filter: grayscale(75%);
+#project-description {
+  padding: 1vw;
+}
+
+#project-container {
+  display: flex;
+  min-width: 25vw;
+}
+
+#project-phacer {
+  max-height: 25vh;
+}
+#project-nba {
+  max-height: 25vh;
+}
+#project-kelp {
+  max-height: 25vh;
+}
+
+#nba-container:after {
+  z-index: -1;
+  content: "\A";
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+#nba-container:hover:after {
+  opacity: 1;
 }
 
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   padding-top: 54px;
-  color: #868e96;
+  color: #dfcfbe;
 }
 
 @media (min-width: 992px) {
@@ -28,16 +44,22 @@ body {
   }
 }
 
+#myVideo {
+  border-radius: 2%;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: #ffd662;
 }
 
 h1 {
@@ -61,7 +83,9 @@ p.lead {
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
 }
 
@@ -83,15 +107,338 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #935529;
+  background-color: #ffd662;
+  animation: bounce 0.7s infinite alternate;
+  -webkit-animation: bounce 0.4s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 
 .dev-icons {
   font-size: 3rem;
 }
 
-.dev-icons .list-inline-item i:hover {
-  color: #935529;
+.dev-icons .list-inline-item:nth-child(8n + 1) {
+  color: #e6261f;
+  animation: color-change-1 10s infinite alternate;
+  -webkit-animation: color-change-1 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 2) {
+  color: #eb7532;
+  animation: color-changer-2 10s infinite alternate;
+  -webkit-animation: color-change-2 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 3) {
+  color: #f7d038;
+  animation: color-change-3 10s infinite alternate;
+  -webkit-animation: color-change-3 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 4) {
+  color: #a3e048;
+  animation: color-change-4 10s infinite alternate;
+  -webkit-animation: color-change-4 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 5) {
+  color: #49da9a;
+  animation: color-change-5 10s infinite alternate;
+  -webkit-animation: color-change-5 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 6) {
+  color: #34bbe6;
+  animation: color-change-6 10s infinite alternate;
+  -webkit-animation: color-change-6 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 7) {
+  color: #4355db;
+  animation: color-change-7 10s infinite alternate;
+  -webkit-animation: color-change-7 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 8) {
+  color: #d23be7;
+  animation: color-change-8 10s infinite alternate;
+  -webkit-animation: color-change-8 10s infinite alternate;
+}
+.dev-icons .list-inline-item:nth-child(8n + 0) {
+  color: #d23be7;
+  animation: color-change-9 10s infinite alternate;
+  -webkit-animation: color-change-9 10s infinite alternate;
+}
+
+@keyframes color-change-1 {
+  0% {
+    color: #e6261f;
+  }
+  12.5% {
+    color: #eb7532;
+  }
+  25% {
+    color: #f7d038;
+  }
+  37.5% {
+    color: #a3e048;
+  }
+  50% {
+    color: #49da9a;
+  }
+  62.5% {
+    color: #34bbe6;
+  }
+  75% {
+    color: #4355db;
+  }
+  87.5% {
+    color: blue;
+  }
+  100% {
+    color: #d23be7;
+  }
+}
+@keyframes color-change-2 {
+  0% {
+    color: #eb7532;
+  }
+  12.5% {
+    color: #f7d038;
+  }
+  25% {
+    color: #a3e048;
+  }
+  37.5% {
+    color: #49da9a;
+  }
+  50% {
+    color: #34bbe6;
+  }
+  62.5% {
+    color: #4355db;
+  }
+  75% {
+    color: blue;
+  }
+  87.5% {
+    color: #d23be7;
+  }
+  100% {
+    color: #e6261f;
+  }
+}
+@keyframes color-change-3 {
+  0% {
+    color: #f7d038;
+  }
+  12.5% {
+    color: #a3e048;
+  }
+  25% {
+    color: #49da9a;
+  }
+  37.5% {
+    color: #34bbe6;
+  }
+  50% {
+    color: #4355db;
+  }
+  62.5% {
+    color: blue;
+  }
+  75% {
+    color: #d23be7;
+  }
+  87.5% {
+    color: #e6261f;
+  }
+  100% {
+    color: #eb7532;
+  }
+}
+@keyframes color-change-4 {
+  0% {
+    color: #a3e048;
+  }
+  12.5% {
+    color: #49da9a;
+  }
+  25% {
+    color: #34bbe6;
+  }
+  37.5% {
+    color: #4355db;
+  }
+  50% {
+    color: blue;
+  }
+  62.5% {
+    color: #d23be7;
+  }
+  75% {
+    color: #e6261f;
+  }
+  87.5% {
+    color: #eb7532;
+  }
+  100% {
+    color: #f7d038;
+  }
+}
+@keyframes color-change-5 {
+  0% {
+    color: #49da9a;
+  }
+  12.5% {
+    color: #34bbe6;
+  }
+  25% {
+    color: #4355db;
+  }
+  37.5% {
+    color: blue;
+  }
+  50% {
+    color: #d23be7;
+  }
+  62.5% {
+    color: #e6261f;
+  }
+  75% {
+    color: #eb7532;
+  }
+  87.5% {
+    color: #f7d038;
+  }
+  100% {
+    color: #a3e048;
+  }
+}
+@keyframes color-change-6 {
+  0% {
+    color: #34bbe6;
+  }
+  12.5% {
+    color: #4355db;
+  }
+  25% {
+    color: blue;
+  }
+  37.5% {
+    color: #d23be7;
+  }
+  50% {
+    color: #e6261f;
+  }
+  62.5% {
+    color: #eb7532;
+  }
+  75% {
+    color: #f7d038;
+  }
+  87.5% {
+    color: #a3e048;
+  }
+  100% {
+    color: #49da9a;
+  }
+}
+@keyframes color-change-7 {
+  0% {
+    color: #4355db;
+  }
+  12.5% {
+    color: blue;
+  }
+  25% {
+    color: #d23be7;
+  }
+  37.5% {
+    color: #e6261f;
+  }
+  50% {
+    color: #eb7532;
+  }
+  62.5% {
+    color: #f7d038;
+  }
+  75% {
+    color: #a3e048;
+  }
+  87.5% {
+    color: #49da9a;
+  }
+  100% {
+    color: #34bbe6;
+  }
+}
+@keyframes color-change-8 {
+  0% {
+    color: blue;
+  }
+  12.5% {
+    color: #d23be7;
+  }
+  25% {
+    color: #e6261f;
+  }
+  37.5% {
+    color: #eb7532;
+  }
+  50% {
+    color: #f7d038;
+  }
+  62.5% {
+    color: #a3e048;
+  }
+  75% {
+    color: #49da9a;
+  }
+  87.5% {
+    color: #34bbe6;
+  }
+  100% {
+    color: #4355db;
+  }
+}
+@keyframes color-change-9 {
+  0% {
+    color: #d23be7;
+  }
+  12.5% {
+    color: #e6261f;
+  }
+  25% {
+    color: #eb7532;
+  }
+  37.5% {
+    color: #f7d038;
+  }
+  50% {
+    color: #a3e048;
+  }
+  62.5% {
+    color: #49da9a;
+  }
+  75% {
+    color: #34bbe6;
+  }
+  87.5% {
+    color: #4355db;
+  }
+  100% {
+    color: blue;
+  }
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -181,23 +528,33 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 992px) {
   section.resume-section {
-    padding-top: 0rem !important;
+    padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
 }
 
 .bg-primary {
-  background-color: #935529 !important;
+  /* background-image: linear-gradient(to top, #30cfd0 0%, #0f0120 100%); */
+  /* background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%); */
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
 }
 
 .text-primary {
-  color: #935529 !important;
+  color: #efe1ceff !important;
 }
 
 a {
-  color: #935529;
+  color: #dfcfbe;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #573218;
+}
+
+.container-fluid {
+  background-color: rgb(0, 0, 0);
 }
